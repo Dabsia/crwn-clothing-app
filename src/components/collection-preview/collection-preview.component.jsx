@@ -10,8 +10,10 @@ const CollectionPreview = ({title,items }) => {
                 {/* // This component displays for items from our storeData file  */}
                 {/* After looping it displays the collenction  */}
                 {
-                    items.filter((item,idx) => idx < 4).map(({id, ...otherItemProps }) => (
-                        <CollectionItem key = {id} {...otherItemProps}/>
+                    items
+                    .filter((item,idx) => idx < 4)
+                    .map((item) => (
+                         <CollectionItem key = {item.id} item = {item}/>
                     ))
                 }
             </div>
