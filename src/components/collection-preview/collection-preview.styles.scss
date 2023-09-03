@@ -9,7 +9,23 @@
   }
 
   .preview {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem
   }
+
+    @media screen and (max-width:950px)  {
+      .preview{
+        
+        grid-template-columns: 1fr 1fr;
+        
+      }
+    }
+
+    @media screen and (max-width:400px)  {
+      .preview{
+        grid-template-columns:  1fr;
+        
+      }
+    }
 }
