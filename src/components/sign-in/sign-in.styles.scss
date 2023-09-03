@@ -10,5 +10,22 @@
     .buttons{
         display: flex;
         justify-content: space-between;
+
+    
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .sign-in{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    .buttons {
+        flex-direction: column;
+        height: 120px;
+        margin-bottom: 2rem;
     }
 }

@@ -42,6 +42,13 @@
     background-size: cover;
   }
 
+  @media screen and (max-width: 500px){
+    .menu-item{
+      height: 200px;
+    }
+    
+  }
+
   .content {
     height: 90px;
     padding: 0 25px;

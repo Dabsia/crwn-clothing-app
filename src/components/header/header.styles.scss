@@ -14,8 +14,9 @@
     @media screen and (max-width: 450px) {
 
         padding: 0;
-        width: fit-content;
-        margin: auto;
+        height: fit-content;
+        width: 50px;
+        align-self: center;
     }
   }
 
@@ -28,20 +29,21 @@
     cursor: pointer;
     @media screen and (max-width: 840px) {
         width: 40%;
+        align-self: center;
       }
 
       @media screen and (max-width: 700px) {
-        width: 50%;
+        width: 60%;
       }
 
-    @media screen and (max-width: 550px) {
-      width: 60%;
+    @media screen and (max-width: 400px) {
+      width: 80%;
     }
-    @media screen and (max-width: 500px){
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 1rem;
-    }
+    // @media screen and (max-width: 500px){
+    //   justify-content: space-between;
+    //   width: 100%;
+    //   // margin-top: 1rem;
+    // }
    
 
     .option {
@@ -56,9 +58,9 @@
 }
 
 @media screen and (max-width: 500px) {
-  .header {
-    flex-direction: column;
-  }
+  // .header {
+  //   flex-direction: column;
+  // }
   
   .option {
       font-size: 14px;

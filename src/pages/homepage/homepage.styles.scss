@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
+ 
 }
 
 .directory-menu {
@@ -44,11 +45,29 @@
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
+
+      
     }
 
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+
+
     }
   }
+    
 }
+
+ @media screen and (max-width:800px) {
+   .homepage {
+     padding: 20px 40px;
+   }
+ }
+
+  @media screen and (max-width:700px) {
+    .homepage {
+      padding: 20px 0;
+    }
+  }
+       
