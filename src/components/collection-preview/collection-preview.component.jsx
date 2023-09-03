@@ -7,7 +7,10 @@ const CollectionPreview = ({ title, items, routeName }) => {
     const navigate = useNavigate()
     return (
         <div className='collection-preview'>
-            <h1 className='title' onClick={() => navigate(`${routeName}`)}>{title.toUpperCase()}</h1>
+            <div className='titleContainer' >
+                <h1 className='title'>{title.toUpperCase()}</h1>
+                <span className='seeAll' onClick={() => navigate(`${routeName}`)} >See all</span>
+            </div>
             <div className='preview'>
                 {/* // This component displays for items from our storeData file  */}
                 {/* After looping it displays the collenction  */}
