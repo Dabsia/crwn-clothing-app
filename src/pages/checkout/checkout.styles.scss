@@ -13,9 +13,12 @@
       justify-content: space-between;
       border-bottom: 1px solid darkgrey;
   
-      .header-block {
+      .header-block span{
         text-transform: capitalize;
-        width: 23%;
+        width: 15%;
+
+       
+
   
         &:last-child {
           width: 8%;
@@ -28,4 +31,25 @@
       margin-left: auto;
       font-size: 36px;
     }
+}
+
+@media screen and (max-width: 1000px) {
+  .checkout-page{
+    width: 70%;
   }
+}
+
+@media screen and (max-width: 700px) {
+  .checkout-page {
+    width: 100%;
+  }
+}
+
+ @media screen and (max-width: 400px) {
+   .header-block span {
+     font-size: 13px;
+   }
+   .total span{
+    font-size: 30px;
+   }
+ }
