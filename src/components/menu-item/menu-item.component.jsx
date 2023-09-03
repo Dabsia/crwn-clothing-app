@@ -7,7 +7,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   const navigate = useNavigate();
 
   return (
-    <div className={`${size} menu-item`} onClick={() => navigate(`hats`)}>
+    <div className={`${size} menu-item`} >
       <div
         className="background-image"
         style={{
@@ -15,7 +15,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
         }}
       ></div>
 
-      <div className="content">
+      <div className="content" onClick={() => navigate(`${linkUrl}`)}>
         <h1 className="title">{title.toUpperCase()}</h1>
         <span className="subtitle">SHOP NOW</span>
       </div>

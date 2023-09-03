@@ -19,13 +19,45 @@
     .sign-in{
         width: 100%;
     }
+    .buttons {
+        width: 50%;
+    }
     
 }
+@media screen and (max-width: 800px) {
 
-@media screen and (max-width: 420px) {
+    .buttons {
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 660px) {
+
+    .buttons {
+        width: 70%;
+    }
+
+}
+@media screen and (max-width: 580px) {
+
+    .buttons {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 510px) {
+
+    .buttons {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 455px) {
     .buttons {
         flex-direction: column;
         height: 120px;
         margin-bottom: 2rem;
+        width: 100%;
     }
 }
