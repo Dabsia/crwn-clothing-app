@@ -20,6 +20,8 @@ import Jackets from './pages/jackets/jackets.component';
 import Sneakers from './pages/sneakers/sneakers.component';
 import Women from './pages/women/women.component';
 import Men from './pages/men/men.component';
+import Contact from './pages/contact/contact.component';
+import Callback from './pages/callback';
 
 // const HomePage = lazy(() => import('./pages/homepage/homepage.component'))
 // const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
@@ -66,11 +68,13 @@ class App extends React.Component {
               <Route exact path='/' element={<HomePage />} />
               <Route path='/shop' element={<ShopPage />} />
               <Route path='/checkout' element={<CheckoutPage />} />
+              <Route path='/contact' element={<Contact />} />
               <Route path='/shop/hats' element={<Hats />} />
               <Route path='/shop/jackets' element={<Jackets />} />
               <Route path='/shop/sneakers' element={<Sneakers />} />
               <Route path='/shop/women' element={<Women />} />
               <Route path='/shop/men' element={<Men />} />
+              <Route path='call' element={<Callback />} />
               <Route
                 path='/signin'
                 exact
