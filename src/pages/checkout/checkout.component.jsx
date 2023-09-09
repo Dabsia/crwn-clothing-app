@@ -1,6 +1,6 @@
 import React from 'react'
 import './checkout.styles.scss'
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors'
@@ -8,6 +8,9 @@ import CheckOutItem from '../../components/checkout-item/checkout-item.component
 import StripeCheckoutButton from '../../components/stripe-checkout-btn/stripe-button.component'
 
 const CheckoutPage = ({ cartItems, total }) => {
+
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
+
     return (
         <div className='checkout-page'>
             <div className='checkout-header'>
@@ -36,7 +39,7 @@ const CheckoutPage = ({ cartItems, total }) => {
                 <span>TOTAL: ${total}</span>
             </div>
             {
-                total > 0 &&
+                total > 0 && isLoggedIn &&
                 <><div className='textWarning' >
                     *Please use the following test credit card for payments
                     <br />

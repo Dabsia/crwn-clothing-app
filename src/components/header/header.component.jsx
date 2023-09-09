@@ -18,7 +18,7 @@ import { logoutUser } from '../../redux/auth/auth.actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 
-const Header = ({ currentUser, hidden }) => {
+const Header = ({ hidden }) => {
 
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
 
@@ -52,7 +52,6 @@ const Header = ({ currentUser, hidden }) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser,
     hidden: selectCartHidden
 })
 

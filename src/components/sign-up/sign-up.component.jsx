@@ -4,6 +4,7 @@ import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { TailSpin } from 'react-loading-icons';
 import { userRegister } from '../../redux/auth/auth.actions';
 
 
@@ -13,6 +14,8 @@ const SignUp = () => {
 
   const dispatch = useDispatch()
   const message = useSelector(state => state.auth.message)
+
+  const isLoading = useSelector(state => state.auth.isLoading)
 
 
 
@@ -77,7 +80,7 @@ const SignUp = () => {
           label='Confirm Password'
         // required
         />
-        <CustomButton type='submit'>SIGN UP</CustomButton>
+        <CustomButton type='submit'>{isLoading ? <TailSpin speed={.75} stroke="#000000" strokeOpacity={1} /> : 'SIGN UP'} </CustomButton>
       </form>
       <p className='messageWarning' >{message}</p>
     </div>

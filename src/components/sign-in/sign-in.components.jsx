@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import { TailSpin } from 'react-loading-icons'
 
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogin } from '../../redux/auth/auth.actions';
@@ -11,6 +12,7 @@ import './sign-in.styles.scss';
 const SignIn = () => {
 
   const message = useSelector(state => state.auth.loginMessage)
+  const isLoading = useSelector(state => state.auth.isLoading)
 
   const dispatch = useDispatch()
 
@@ -58,7 +60,7 @@ const SignIn = () => {
           required
         />
         <div className='buttons'>
-          <CustomButton type='submit'> Sign in </CustomButton>
+          <CustomButton type='submit'> {isLoading ? <TailSpin speed={.75} stroke="#000000" strokeOpacity={1} /> : 'Sign in'} </CustomButton>
           <CustomButton isGoogleSignIn>
             Sign in with Google
           </CustomButton>
