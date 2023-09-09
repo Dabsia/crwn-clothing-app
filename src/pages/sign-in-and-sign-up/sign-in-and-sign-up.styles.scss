@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+    .messageWarning{
+      color: red;
+      font-size: 12px;
+      margin-top: 1rem;
+    }
   }
 
 @media screen and (max-width: 870px) {
